@@ -1,6 +1,7 @@
 ---
 title: Hello World
 date: "2019-03-17"
+description: "First post, classic Hello World!"
 ---
 
 This is my first post on my new blog! How exciting!
