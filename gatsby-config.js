@@ -4,9 +4,6 @@ module.exports = {
     author: `Christian Bélisle`,
     description: `My personal blog about building software, from the beginning to the end.`,
     siteUrl: `https://cbelisle.github.io/`,
-    social: {
-      twitter: `c_belisle`,
-    },
   },
   plugins: [
     {

@@ -16,7 +16,7 @@ function Bio() {
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author } = data.site.siteMetadata
         return (
           <div
             style={{
@@ -38,11 +38,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+              Written by me, <strong>{author}</strong>.
             </p>
           </div>
         )
@@ -55,7 +51,7 @@ const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 100, height: 100) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -63,9 +59,6 @@ const bioQuery = graphql`
     site {
       siteMetadata {
         author
-        social {
-          twitter
-        }
       }
     }
   }
